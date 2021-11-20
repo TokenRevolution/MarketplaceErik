@@ -150,20 +150,7 @@ width:100% !important;
 			  <input type="text" id="Value" name="Value"><br><br>
 			  
 <!-- Prova --!>
-			<script>
-const ethereumButton = document.querySelector('.enableEthereumButton');
-const showAccount = document.querySelector('.showAccount');
 
-ethereumButton.addEventListener('click', () => {
-  getAccount();
-});
-
-async function getAccount() {
-  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-  const account = accounts[0];
-  showAccount.innerHTML = account;
-}
-</script>
 <div>
 <button class="enableEthereumButton">Enable Ethereum</button>
 <h2>Account: <span class="showAccount"></span></h2>
@@ -195,5 +182,20 @@ async function getAccount() {
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
+			  			
 </body>
+			<script>
+const ethereumButton = document.querySelector('.enableEthereumButton');
+const showAccount = document.querySelector('.showAccount');
+
+ethereumButton.addEventListener('click', () => {
+  getAccount();
+});
+
+async function getAccount() {
+  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+  const account = accounts[0];
+  showAccount.innerHTML = account;
+}
+</script>
 </html>

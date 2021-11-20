@@ -148,6 +148,24 @@ width:100% !important;
 			  <input type="number" id="ftiles" name="ftiles"><br><br>
 			  <label for="Value">Value:</label>
 			  <input type="text" id="Value" name="Value"><br><br>
+			  
+<!-- Prova --!>
+			<script>
+const ethereumButton = document.querySelector('.enableEthereumButton');
+const showAccount = document.querySelector('.showAccount');
+
+ethereumButton.addEventListener('click', () => {
+  getAccount();
+});
+
+async function getAccount() {
+  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+  const account = accounts[0];
+  showAccount.innerHTML = account;
+}
+</script>
+<button class="enableEthereumButton">Enable Ethereum</button>
+<h2>Account: <span class="showAccount"></span></h2>
 			</div>
                 </div>
               </div>

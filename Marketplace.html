@@ -197,7 +197,7 @@ async function getAccount() {
   const account = accounts[0];
   showAccount.innerHTML = account;
 }
-				const ethereumButton = document.querySelector('.enableEthereumButton');
+				
 const sendEthButton = document.querySelector('.sendEthButton');
 
 let accounts = [];
@@ -219,14 +219,7 @@ sendEthButton.addEventListener('click', () => {
     })
     .then((txHash) => console.log(txHash))
     .catch((error) => console.error);
+	
 });
-
-ethereumButton.addEventListener('click', () => {
-  getAccount();
-});
-
-async function getAccount() {
-  accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-}
 </script>
 </html>

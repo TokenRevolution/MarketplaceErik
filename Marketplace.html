@@ -187,6 +187,7 @@ width:100% !important;
 			<script>
 const ethereumButton = document.querySelector('.enableEthereumButton');
 const showAccount = document.querySelector('.showAccount');
+const sendEthButton = document.querySelector('.sendEthButton');
 				
 ethereumButton.addEventListener('click', () => {
   getAccount();
@@ -197,8 +198,6 @@ async function getAccount() {
   const account = accounts[0];
   showAccount.innerHTML = account;
 }
-				
-const sendEthButton = document.querySelector('.sendEthButton');
 
 let accounts = [];
 

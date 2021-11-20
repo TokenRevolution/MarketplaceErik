@@ -68,7 +68,7 @@ width:100% !important;
               <li class="scroll-to-section"><a href="#portfolio">About Us</a></li>
               <li class="scroll-to-section"><a href="#blog">Socials</a></li>
               <li class="scroll-to-section"><a href="#contact">Contact</a></li> 		
-	      <li class="scroll-to-section"><div id="wallet"><button class="sendEthButton btn">Send Eth</button><button class="enableEthereumButton">Metamask Connect</button><h2>Account: <span class="showAccount"></span></h2></div></li>
+	      <li class="scroll-to-section"><div id="wallet"><button class="enableEthereumButton">Metamask Connect</button><h2>Account: <span class="showAccount"></span></h2></div></li>
             </ul>
 <br>
 <br>
@@ -146,7 +146,7 @@ width:100% !important;
                     <span class="date">24 September 2021</span>
                     <a href="#"><h4>Nuova casa in vendita, raccolta appena iniziata, costo per tile $ 2000</h4></a>
                     <p>In splendita localita a Tenerife, via le mani dal naso, si avvia costruzione di una villa di Mq 400 e valore di costruzione di $ 800.000, il valore di ogni tiles è pari a $ 2000</p>
-                  <br><div id="buy" align="center"><div class="border-first-button"><a href="#">BUY NOW</a></div></div>
+                  <br><div id="buy" align="center"><div class="border-first-button"><button class="sendEthButton btn">Buy NOW</button></div></div>
 			  <br>
 			  <label for="ftiles">N° of tiles:</label>
 			  <input type="number" id="ftiles" name="ftiles"><br><br>
@@ -187,6 +187,17 @@ width:100% !important;
 			<script>
 const ethereumButton = document.querySelector('.enableEthereumButton');
 const showAccount = document.querySelector('.showAccount');
+				
+ethereumButton.addEventListener('click', () => {
+  getAccount();
+});
+
+async function getAccount() {
+  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+  const account = accounts[0];
+  showAccount.innerHTML = account;
+}
+				const ethereumButton = document.querySelector('.enableEthereumButton');
 const sendEthButton = document.querySelector('.sendEthButton');
 
 let accounts = [];
@@ -209,15 +220,13 @@ sendEthButton.addEventListener('click', () => {
     .then((txHash) => console.log(txHash))
     .catch((error) => console.error);
 });
-				
+
 ethereumButton.addEventListener('click', () => {
   getAccount();
 });
 
 async function getAccount() {
-  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-  const account = accounts[0];
-  showAccount.innerHTML = account;
+  accounts = await ethereum.request({ method: 'eth_requestAccounts' });
 }
 </script>
 </html>

@@ -142,9 +142,9 @@ width:100% !important;
 			  <br><div id="buy" align="center"><button class="sendEthButton btn">BUY NOW</button></div>
 			  <br>
 			  <label for="ftiles">N° of tiles:</label>
-			  <input type="number" id="ftiles" name="ftiles"><br><br>
+			  <input type="number" id="ftiles1" name="ftiles"><br><br>
 			  <label for="Value">Value:</label>
-			  <input type="text" id="Value" name="Value"><br><br>
+			  <input type="text" id="Value1" name="Value"><br><br>
 			</div>
                 </div>
               </div>
@@ -219,7 +219,15 @@ width:100% !important;
   <script src="assets/js/custom.js"></script>
 				
 			  </body>
-    <script>	    
+    <script>
+const Value1 = document.getElementById('.Value1');
+const ftiles1 = document.getElementById('.ftiles1');
+	    
+	    ftiles1.addEventListener("change", function() {Value1.innerHTML=ftiles1.value*2000});
+	    
+	    
+});
+	    
 const ethereumButton = document.querySelector('.enableEthereumButton');
 /*
 	    const sendEthButton = document.querySelector('.sendEthButton');

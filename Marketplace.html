@@ -224,10 +224,11 @@ export default function App() {
       ether: data.get("ether"),
       addr: data.get("addr")
     });
-  };
-
-  return (
-    <form className="m-4" onSubmit={handleSubmit}>
+  };   
+  );
+}
+  </script>	
+	 <form className="m-4" onSubmit={handleSubmit}>
       <div className="credit-card w-full lg:w-1/2 sm:w-auto shadow-lg mx-auto rounded-xl bg-white">
         <main className="mt-4 p-4">
           <h1 className="text-xl font-semibold text-gray-700 text-center">
@@ -264,9 +265,6 @@ export default function App() {
  
       </div>
     </form>
-  );
-}
-  </script>			  
 			  			
 </body>
 			<script>

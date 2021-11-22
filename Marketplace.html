@@ -219,15 +219,20 @@ width:100% !important;
   <script src="assets/js/custom.js"></script>
 				
 			  </body>
-    <script>
+    <script>	    
 const ethereumButton = document.querySelector('.enableEthereumButton');
-const sendEthButton = document.querySelector('.sendEthButton');
-const showAccount = document.querySelector('.showAccount');
+/*
+	    const sendEthButton = document.querySelector('.sendEthButton');
+*/	    
+const showAccount = document.getElementByClassName('.showAccount');
+   	    const send = document.getElementByClassName('.sendEthButton');
+	    /* const send2 = document.getElementByClassName('.sendEthButton')[1];
+	    const send3 = document.getElementByClassName('.sendEthButton')[2]; */
 
 let accounts = [];
 
 //Sending Ethereum to an address
-sendEthButton.addEventListener('click', () => {
+send.addEventListener('click', () => {
   ethereum
     .request({
       method: 'eth_sendTransaction',

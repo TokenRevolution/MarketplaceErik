@@ -5,20 +5,18 @@
 </head>
 <body>
   <div>
-  <button class="enableEthereumButton btn">Enable METAMASK</button>
+  <button class="enableEthereumButton btn">Connect METAMASK</button>
     <br>
 <button class="sendEthButton btn">Send BUSD</button>
     <br>
   Connected Account:  <span class="showAccount"></span>
     </div>
-  <script type="text/javascript">
+  <script>
 const ethereumButton = document.querySelector('.enableEthereumButton');
 const sendEthButton = document.querySelector('.sendEthButton');
 
-
 let accounts = [];
- 
-    
+
 //Sending Ethereum to an address
 sendEthButton.addEventListener('click', () => {
   ethereum
@@ -37,17 +35,14 @@ sendEthButton.addEventListener('click', () => {
     .then((txHash) => console.log(txHash))
     .catch((error) => console.error);
 });
-const showAccount = document.querySelector('.showAccount');
- 
-  ethereumButton.addEventListener('click', () => {
+
+ethereumButton.addEventListener('click', () => {
   getAccount();
-});   
-    
- async function getAccount() {
-  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-  const account = accounts[0];
-  showAccount.innerHTML = account;
+});
+
+async function getAccount() {
+  accounts = await ethereum.request({ method: 'eth_requestAccounts' });
 }
-  </script>
+  </scipt>
 </body>
 </html>

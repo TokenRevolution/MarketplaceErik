@@ -5,7 +5,7 @@
 </head>
 <body>
   <div>
-  <button class="enableEthereumButton btn">Enable Ethereum lota</button>
+  <button class="enableEthereumButton btn">Enable Ethereum</button>
     <br>
 <button class="sendEthButton btn">Send Eth</button>
     <br>
@@ -15,15 +15,6 @@
 const ethereumButton = document.querySelector('.enableEthereumButton');
 const sendEthButton = document.querySelector('.sendEthButton');
 const showAccount = document.querySelector('.showAccount');
-    
-    ethereumButton.addEventListener('click', () => {
-  getAccount();
-});
-    async function getAccount() {
-  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-  const account = accounts[0];
-  showAccount.innerHTML = account;
-}
 
 let accounts = [];
 
@@ -45,13 +36,13 @@ sendEthButton.addEventListener('click', () => {
     .then((txHash) => console.log(txHash))
     .catch((error) => console.error);
 });
-
-ethereumButton.addEventListener('click', () => {
+    ethereumButton.addEventListener('click', () => {
   getAccount();
 });
-
-async function getAccount() {
-  accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+ async function getAccount() {
+  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+  const account = accounts[0];
+  showAccount.innerHTML = account;
 }
   </script>
 </body>

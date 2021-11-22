@@ -182,29 +182,48 @@ width:100% !important;
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
-	 <Button color={"blue"} size="2" onClick={async ()=>{
-
-                var tx = {
-                  to: this.state.to,
-                  from: this.state.accounts[0],
-                  value: this.state.value,
-                  data: '0x00'
-                }
-
-                web3.eth.sendTransaction(tx).then((receipt)=>{
-                  console.log("receipt",receipt)
-                  this.setState({receipt:receipt})
-                });
-              }}>
-              Send Transaction
-            </Button>
-            <div>
-            <div style={{width:"60%",wordWrap:"break-word",color:"#cccccc",backgroundColor:"#444444",margin:"auto",fontSize:12,padding:10}}>
-              {JSON.stringify(this.state.receipt)}
-            </div>
-            </div>
-          </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+	 <div>
+    <button class="pay-button">Pay</button>
+    <div id="status"></div>
+  </div>
+  <script type="text/javascript">
+    window.addEventListener('load', async() => {
+      if (window.ethereum) {
+        window.web3 = new Web3(ethereum);
+        try {
+          await ethereum.enable();
+          initPayButton()
+        } catch (err) {
+          $('#status').html('User denied account access', err)
+        }
+      } else if (window.web3) {
+        window.web3 = new Web3(web3.currentProvider)
+        initPayButton()
+      } else {
+        $('#status').html('No Metamask (or other Web3 Provider) installed')
+      }
+    })
+    const initPayButton = () => {
+      $('.pay-button').click(() => {
+        // paymentAddress
+        const paymentAddress = '0x01910833896EEdf036A99b2CC34df6Da01BB15E3'
+        const amountEth = 1
+        web3.eth.sendTransaction({
+          to: paymentAddress,
+          value: web3.toWei(amountEth, 'ether')
+        }, (err, transactionId) => {
+          if (err) {
+            console.log('Payment failed', err)
+            $('#status').html('Payment failed')
+          } else {
+            console.log('Payment successful', transactionId)
+            $('#status').html('Payment successful')
+          }
+        })
+      })
+    }
+  </script>
 			  			
 </body>
 			<script>

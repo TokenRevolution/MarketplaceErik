@@ -4,48 +4,40 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-  <div>
-    <button class="pay-button">Pay</button>
-    <div id="status"></div>
-  </div>
+  <button class="enableEthereumButton btn">Enable Ethereum</button>
+<button class="sendEthButton btn">Send Eth</button>
   <script type="text/javascript">
-    window.addEventListener('load', async () => {
-      if (window.ethereum) {
-        window.web3 = new Web3(ethereum);
-        try {
-          await ethereum.enable();
-          initPayButton()
-        } catch (err) {
-          $('#status').html('User denied account access', err)
-        }
-      } else if (window.web3) {
-        window.web3 = new Web3(web3.currentProvider)
-        initPayButton()
-      } else {
-        $('#status').html('No Metamask (or other Web3 Provider) installed')
-      }
+const ethereumButton = document.querySelector('.enableEthereumButton');
+const sendEthButton = document.querySelector('.sendEthButton');
+
+let accounts = [];
+
+//Sending Ethereum to an address
+sendEthButton.addEventListener('click', () => {
+  ethereum
+    .request({
+      method: 'eth_sendTransaction',
+      params: [
+        {
+          from: accounts[0],
+          to: '0x2f318C334780961FB129D2a6c30D0763d9a5C970',
+          value: '0x29a2241af62c0000',
+          gasPrice: '0x09184e72a000',
+          gas: '0x2710',
+        },
+      ],
     })
+    .then((txHash) => console.log(txHash))
+    .catch((error) => console.error);
+});
 
-    const initPayButton = () => {
-      $('.pay-button').click(() => {
-        // paymentAddress is where funds will be send to
-        const paymentAddress = '0x192c96bfee59158441f26101b2db1af3b07feb40'
-        const amountEth = 1
+ethereumButton.addEventListener('click', () => {
+  getAccount();
+});
 
-        web3.eth.sendTransaction({
-          to: paymentAddress,
-          value: web3.toWei(amountEth, 'ether')
-        }, (err, transactionId) => {
-          if  (err) {
-            console.log('Payment failed', err)
-            $('#status').html('Payment failed')
-          } else {
-            console.log('Payment successful', transactionId)
-            $('#status').html('Payment successful')
-          }
-        })
-      })
-    }
+async function getAccount() {
+  accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+}
   </script>
 </body>
 </html>

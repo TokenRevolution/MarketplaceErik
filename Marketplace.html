@@ -183,23 +183,7 @@ width:100% !important;
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
   </script>
-			  
-			  			
-</body>
-			<script>
-const ethereumButton = document.querySelector('.enableEthereumButton');
-const showAccount = document.querySelector('.showAccount');
-				
-ethereumButton.addEventListener('click', () => {
-  getAccount();
-});
-
-async function getAccount() {
-  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-  const account = accounts[0];
-  showAccount.innerHTML = account;
-}
-<script>
+		
 			import { useState } from "react";
 import { ethers } from "ethers";
 import ErrorMessage from "./ErrorMessage";
@@ -282,7 +266,22 @@ export default function App() {
     </form>
   );
 }
-	</script>
+			  
+			  			
+</body>
+			<script>
+const ethereumButton = document.querySelector('.enableEthereumButton');
+const showAccount = document.querySelector('.showAccount');
+				
+ethereumButton.addEventListener('click', () => {
+  getAccount();
+});
+
+async function getAccount() {
+  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+  const account = accounts[0];
+  showAccount.innerHTML = account;
+}
 
 </script>
 </html>

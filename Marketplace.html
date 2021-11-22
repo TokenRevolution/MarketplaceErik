@@ -182,6 +182,29 @@ width:100% !important;
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
+	 <Button color={"blue"} size="2" onClick={async ()=>{
+
+                var tx = {
+                  to: this.state.to,
+                  from: this.state.accounts[0],
+                  value: this.state.value,
+                  data: '0x00'
+                }
+
+                web3.eth.sendTransaction(tx).then((receipt)=>{
+                  console.log("receipt",receipt)
+                  this.setState({receipt:receipt})
+                });
+              }}>
+              Send Transaction
+            </Button>
+            <div>
+            <div style={{width:"60%",wordWrap:"break-word",color:"#cccccc",backgroundColor:"#444444",margin:"auto",fontSize:12,padding:10}}>
+              {JSON.stringify(this.state.receipt)}
+            </div>
+            </div>
+          </div>
+
 			  			
 </body>
 			<script>

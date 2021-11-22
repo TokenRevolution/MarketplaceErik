@@ -226,13 +226,13 @@ const ethereumButton = document.querySelector('.enableEthereumButton');
 */	    
 const showAccount = document.querySelector('.showAccount');
 const send = document.querySelector('.sendEthButton');
-	    /* const send2 = document.querySelector('.sendEthButton')[1];
-	    const send3 = document.querySelector('.sendEthButton')[2]; */
+const send2 = document.querySelector('.sendEthButton')[1];
+	    */ const send3 = document.querySelector('.sendEthButton')[2]; */
 
 let accounts = [];
 
 //Sending Ethereum to an address
-send.addEventListener('click', () => {
+send2.addEventListener('click', () => {
   ethereum
     .request({
       method: 'eth_sendTransaction',

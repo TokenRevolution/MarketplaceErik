@@ -182,51 +182,6 @@ width:100% !important;
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-	 <div>
-    <button class="pay-button">Pay</button>
-    <div id="status"></div>
-  </div>
-  <script type="text/javascript">
-    window.addEventListener('load', async() => {
-      if (window.ethereum) {
-        window.web3 = new Web3(ethereum);
-        try {
-          await ethereum.enable();
-          initPayButton()
-        } catch (err) {
-          $('#status').html('User denied account access', err)
-        }
-      } else if (window.web3) {
-        window.web3 = new Web3(web3.currentProvider)
-        initPayButton()
-      } else {
-        $('#status').html('No Metamask (or other Web3 Provider) installed')
-      }
-    })
-    const initPayButton = () => {
-      $('.pay-button').click(() => {
-        // paymentAddress
-        const paymentAddress = '0x01910833896EEdf036A99b2CC34df6Da01BB15E3'
-        const amountEth = 1
-        web3.eth.sendTransaction({
-          to: paymentAddress,
-          value: web3.toWei(amountEth, 'ether')
-        }, (err, transactionId) => {
-          if (err) {
-            console.log('Payment failed', err)
-            $('#status').html('Payment failed')
-          } else {
-            console.log('Payment successful', transactionId)
-            $('#status').html('Payment successful')
-          }
-        })
-      })
-    }
-   pippo
-const to = '0x9ebf6f16c0dad9f92eaaca8dbd40944e614338ae'
-const value = 0.01 // ether
-window.open(`https://pay.buildship.dev/to/${to}?value=${value}`,'payment','width=500, height=800');
   </script>
 			  
 			  			

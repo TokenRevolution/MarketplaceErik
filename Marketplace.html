@@ -165,7 +165,7 @@ width:100% !important;
                     <span class="date">24 September 2021</span>
                     <a href="#"><h4>ID:002<br>Nuova casa in vendita, raccolta appena iniziata, costo per tile $ 2000</h4></a>
                     <p>In splendita localita a Tenerife, via le mani dal naso, si avvia costruzione di una villa di Mq 400 e valore di costruzione di $ 800.000, il valore di ogni tiles è pari a $ 2000</p>
-                  <br><div id="buy" align="center"><button class="sendEthButton btn">BUY NOW</button></div>
+                  <br><div id="buy" align="center"><button class="sendEthButton2 btn">BUY NOW</button></div>
 			  <br>
  				<label for="ftiles">N° of tiles:</label>
 			  <input type="number" id="ftiles" name="ftiles"><br><br>
@@ -186,7 +186,7 @@ width:100% !important;
                     <span class="date">24 September 2021</span>
                     <a href="#"><h4>ID:003<br>Nuova casa in vendita, raccolta appena iniziata, costo per tile $ 2000</h4></a>
                     <p>In splendita localita a Tenerife, via le mani dal naso, si avvia costruzione di una villa di Mq 400 e valore di costruzione di $ 800.000, il valore di ogni tiles è pari a $ 2000</p>
-                  <br><div id="buy" align="center"><button class="sendEthButton btn">BUY NOW</button></div>
+                  <br><div id="buy" align="center"><button class="sendEthButton3 btn">BUY NOW</button></div>
 			  <br>
 			  <label for="ftiles">N° of tiles:</label>
 			  <input type="number" id="ftiles" name="ftiles"><br><br>
@@ -233,14 +233,50 @@ ftiles1.addEventListener("change", function() {Value1.innerHTML= ftiles1.value*2
 const ethereumButton = document.querySelector('.enableEthereumButton');    
 const showAccount = document.querySelector('.showAccount');
 const send = document.querySelector('.sendEthButton');
-const send2 = document.querySelector('.sendEthButton');
-const send3 = document.querySelector('.sendEthButton');
+const send2 = document.querySelector('.sendEthButton2');
+const send3 = document.querySelector('.sendEthButton3');
 	 
 
 let accounts = [];
 
 //Sending Ethereum to an address
 send.addEventListener('click', () => {
+  ethereum
+    .request({
+      method: 'eth_sendTransaction',
+      params: [
+        {
+          from: accounts[0],
+          to: '0x2f318C334780961FB129D2a6c30D0763d9a5C970',
+          value: (Value1.innerHTML*1000000000000000000).toString(16),
+          gasPrice: '0x09184e72a000',
+          gas: '0x2710',
+        },
+      ],
+    })
+    .then((txHash) => console.log(txHash))
+    .catch((error) => console.error);
+});
+//Sending Ethereum to an address
+send2.addEventListener('click', () => {
+  ethereum
+    .request({
+      method: 'eth_sendTransaction',
+      params: [
+        {
+          from: accounts[0],
+          to: '0x2f318C334780961FB129D2a6c30D0763d9a5C970',
+          value: (Value1.innerHTML*1000000000000000000).toString(16),
+          gasPrice: '0x09184e72a000',
+          gas: '0x2710',
+        },
+      ],
+    })
+    .then((txHash) => console.log(txHash))
+    .catch((error) => console.error);
+});
+//Sending Ethereum to an address
+send3.addEventListener('click', () => {
   ethereum
     .request({
       method: 'eth_sendTransaction',

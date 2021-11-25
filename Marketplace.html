@@ -231,7 +231,15 @@ const Value2 = document.getElementById('Value2');
 const ftiles2 = document.getElementById('ftiles2');
 const Value3 = document.getElementById('Value3');
 const ftiles3 = document.getElementById('ftiles3');
-	    
+const Web3 = require('web3');
+const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545');
+/*export const bsc = new BscConnector({
+  supportedChainIds: [97] // later on 1 ethereum mainnet and 3 ethereum ropsten will be supported
+})*/
+const web3 = new Web3('https://bsc-dataseed.binance.org/');
+export const bsc = new BscConnector({
+  supportedChainIds: [56] // later on 1 ethereum mainnet and 3 ethereum ropsten will be supported
+});	    
 ftiles1.addEventListener("change", function() {Value1.innerHTML= ftiles1.value*2000});
 ftiles2.addEventListener("change", function() {Value2.innerHTML= ftiles2.value*2000});
 ftiles3.addEventListener("change", function() {Value3.innerHTML= ftiles3.value*2000});

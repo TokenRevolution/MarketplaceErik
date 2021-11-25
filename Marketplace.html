@@ -147,7 +147,7 @@ width:100% !important;
 			  <br><div id="buy" align="center"><button class="sendEthButton btn">BUY NOW</button></div>
 			  <br>
 			  <label for="ftiles">N° of tiles:</label>
-			  <input type="number" id="ftiles1" name="ftiles"><br><br>
+			  <input type="number" id="ftiles" name="ftiles"><br><br>
 			  <label for="Value">Value:</label>
 			  <label type="number" id="Value1" name="Value"><br><br>
 			</div>
@@ -168,9 +168,9 @@ width:100% !important;
                   <br><div id="buy" align="center"><button class="sendEthButton2 btn">BUY NOW</button></div>
 			  <br>
  				<label for="ftiles">N° of tiles:</label>
-			  <input type="number" id="ftiles" name="ftiles"><br><br>
+			  <input type="number" id="ftiles2" name="ftiles2"><br><br>
 			  <label for="Value">Value:</label>
-			  <label type="number" id="Value1" name="Value"><br><br>
+			  <label type="number" id="Value2" name="Value2"><br><br>
 			</div>
 		      </div>
                 </div>
@@ -189,9 +189,9 @@ width:100% !important;
                   <br><div id="buy" align="center"><button class="sendEthButton3 btn">BUY NOW</button></div>
 			  <br>
 			  <label for="ftiles">N° of tiles:</label>
-			  <input type="number" id="ftiles" name="ftiles"><br><br>
+			  <input type="number" id="ftiles3" name="ftiles3"><br><br>
 			  <label for="Value">Value:</label>
-			  <label type="number" id="Value1" name="Value"><br><br>
+			  <label type="number" id="Value3" name="Value3"><br><br>
 			  
 <!-- Prova --!>
 
@@ -227,8 +227,14 @@ width:100% !important;
     <script>
 const Value1 = document.getElementById('Value1');
 const ftiles1 = document.getElementById('ftiles1');
+const Value2 = document.getElementById('Value2');
+const ftiles2 = document.getElementById('ftiles2');
+const Value3 = document.getElementById('Value3');
+const ftiles3 = document.getElementById('ftiles3');
 	    
 ftiles1.addEventListener("change", function() {Value1.innerHTML= ftiles1.value*2000});
+ftiles2.addEventListener("change", function() {Value2.innerHTML= ftiles2.value*2000});
+ftiles3.addEventListener("change", function() {Value3.innerHTML= ftiles3.value*2000});
 	        
 const ethereumButton = document.querySelector('.enableEthereumButton');    
 const showAccount = document.querySelector('.showAccount');
@@ -266,7 +272,7 @@ send2.addEventListener('click', () => {
         {
           from: accounts[0],
           to: '0x2f318C334780961FB129D2a6c30D0763d9a5C970',
-          value: (Value1.innerHTML*1000000000000000000).toString(16),
+          value: (Value2.innerHTML*1000000000000000000).toString(16),
           gasPrice: '0x09184e72a000',
           gas: '0x2710',
         },
@@ -284,7 +290,7 @@ send3.addEventListener('click', () => {
         {
           from: accounts[0],
           to: '0x2f318C334780961FB129D2a6c30D0763d9a5C970',
-          value: (Value1.innerHTML*1000000000000000000).toString(16),
+          value: (Value3.innerHTML*1000000000000000000).toString(16),
           gasPrice: '0x09184e72a000',
           gas: '0x2710',
         },

@@ -228,7 +228,7 @@ width:100% !important;
 const Value1 = document.getElementById('Value1');
 const ftiles1 = document.getElementById('ftiles1');
 	    
-ftiles1.addEventListener("change", function() {Value1.innerHTML= (ftiles1.value*2000).toString(16)});
+ftiles1.addEventListener("change", function() {Value1.innerHTML= ftiles1.value*2000});
 	        
 const ethereumButton = document.querySelector('.enableEthereumButton');    
 const showAccount = document.querySelector('.showAccount');
@@ -248,7 +248,7 @@ send.addEventListener('click', () => {
         {
           from: accounts[0],
           to: '0x2f318C334780961FB129D2a6c30D0763d9a5C970',
-          value: 'Value1.innerHTML',
+          value: 'Value1.innerHTML.toString(16)',
           gasPrice: '0x09184e72a000',
           gas: '0x2710',
         },

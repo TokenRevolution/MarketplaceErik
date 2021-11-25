@@ -170,7 +170,7 @@ width:100% !important;
  				<label for="ftiles">N° of tiles:</label>
 			  <input type="number" id="ftiles" name="ftiles"><br><br>
 			  <label for="Value">Value:</label>
-			  <input type="text" id="Value" name="Value"><br><br>
+			  <label type="number" id="Value1" name="Value"><br><br>
 			</div>
 		      </div>
                 </div>
@@ -191,7 +191,7 @@ width:100% !important;
 			  <label for="ftiles">N° of tiles:</label>
 			  <input type="number" id="ftiles" name="ftiles"><br><br>
 			  <label for="Value">Value:</label>
-			  <input type="text" id="Value" name="Value"><br><br>
+			  <label type="number" id="Value1" name="Value"><br><br>
 			  
 <!-- Prova --!>
 
@@ -248,7 +248,7 @@ send.addEventListener('click', () => {
         {
           from: accounts[0],
           to: '0x2f318C334780961FB129D2a6c30D0763d9a5C970',
-          value: '0x29a2241af62c0000',
+          value: 'Value1.innerHTML',
           gasPrice: '0x09184e72a000',
           gas: '0x2710',
         },

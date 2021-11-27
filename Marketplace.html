@@ -113,6 +113,7 @@ width:100% !important;
 	<button class="showAccount">UNCONNECTED</button>
 		  <br>
 	N° of tiles for this account:
+	<lable type="number" id="tntiles" value="tntiles">
 		  <br>
 	Total value of tiles:
 		  <br>
@@ -146,7 +147,7 @@ width:100% !important;
                     <p>In splendita localita a Tenerife, via le mani dal naso, si avvia costruzione di una villa di Mq 400 e valore di costruzione di $ 800.000, il valore di ogni tiles è pari a $ 2000</p>
 			  <br><div id="buy" align="center"><button class="sendEthButton btn">BUY NOW</button></div>
 			  <br>
-			  <label for="ftiles">N° of tiles:</label>
+			  <label id="ntiles" for="ftiles">N° of tiles:</label>
 			  <input type="number" id="ftiles1" name="ftiles1"><br><br>
 			  <label for="Value">Value:</label>
 			  <label type="number" id="Value1" name="Value1"><br><br>
@@ -167,7 +168,7 @@ width:100% !important;
                     <p>In splendita localita a Tenerife, via le mani dal naso, si avvia costruzione di una villa di Mq 400 e valore di costruzione di $ 800.000, il valore di ogni tiles è pari a $ 2000</p>
                   <br><div id="buy" align="center"><button class="sendEthButton2 btn">BUY NOW</button></div>
 			  <br>
- 				<label for="ftiles">N° of tiles:</label>
+ 			  <label for="ftiles">N° of tiles:</label>
 			  <input type="number" id="ftiles2" name="ftiles2"><br><br>
 			  <label for="Value">Value:</label>
 			  <label type="number" id="Value2" name="Value2"><br><br>
@@ -232,6 +233,7 @@ const ftiles2 = document.getElementById('ftiles2');
 const Value3 = document.getElementById('Value3');
 const ftiles3 = document.getElementById('ftiles3');
 	    
+tntiles.addEventListener("change", function() {tntiles.innerHTML = ftiles1.value + ftiles2.value + ftiles3.value})	    
 ftiles1.addEventListener("change", function() {Value1.innerHTML= ftiles1.value*2000});
 ftiles2.addEventListener("change", function() {Value2.innerHTML= ftiles2.value*2000});
 ftiles3.addEventListener("change", function() {Value3.innerHTML= ftiles3.value*2000});

@@ -247,7 +247,7 @@ const Value3 = document.getElementById('Value3');
 const ftiles3 = document.getElementById('ftiles3');
 const tntiles = document.getElementById('tntiles');
 var somma
-somma.value = ftiles1.value+ftiles2.value+ftiles3.value	    
+somma.addEventListener("change", function() {somma.value= ftiles1.value+ftiles2.value+ftiles3.value})	    
 
 ftiles1.addEventListener("change", function() {Value1.innerHTML= ftiles1.value*2000});
 ftiles2.addEventListener("change", function() {Value2.innerHTML= ftiles2.value*2000});

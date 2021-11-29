@@ -247,12 +247,14 @@ const Value3 = document.getElementById('Value3');
 const ftiles3 = document.getElementById('ftiles3');
 const tntiles = document.getElementById('tntiles');
 var somma
-somma=(ftiles1.value+ftiles2.value+ftiles3.value)	    
+somma=0	    
 	    
 ftiles1.addEventListener("change", function() {Value1.innerHTML= ftiles1.value*2000});
 ftiles2.addEventListener("change", function() {Value2.innerHTML= ftiles2.value*2000});
 ftiles3.addEventListener("change", function() {Value3.innerHTML= ftiles3.value*2000});
+Somma.addEventListener("change", function() {Somma.innerHTML= (ftiles1.value+ftiles2.value+ftiles3.value)});
 tntiles.addEventListener("change", function() {tntiles.innerHTML= somma.value});    
+	        
 	        
 const ethereumButton = document.querySelector('.enableEthereumButton');    
 const showAccount = document.querySelector('.showAccount');

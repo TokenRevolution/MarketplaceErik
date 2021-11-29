@@ -246,7 +246,7 @@ const ftiles2 = document.getElementById('ftiles2');
 const Value3 = document.getElementById('Value3');
 const ftiles3 = document.getElementById('ftiles3');
 const tntiles = document.getElementById('tntiles');
-
+const totalvalue = document.getElementById('totalvalue')
 	    
 	    
 ftiles1.addEventListener("change", function() {Value1.innerHTML= ftiles1.value*2000});
@@ -255,6 +255,10 @@ ftiles3.addEventListener("change", function() {Value3.innerHTML= ftiles3.value*2
 ftiles1.addEventListener("change", function() {tntiles.innerHTML= ((Number(ftiles1.value)) + (Number(ftiles2.value)) + (Number(ftiles3.value)))});
 ftiles2.addEventListener("change", function() {tntiles.innerHTML= ((Number(ftiles1.value)) + (Number(ftiles2.value)) + (Number(ftiles3.value)))});
 ftiles3.addEventListener("change", function() {tntiles.innerHTML= ((Number(ftiles1.value)) + (Number(ftiles2.value)) + (Number(ftiles3.value)))});
+ftiles1.addEventListener("change", function() {totalvalue.innerHTML= ((Number(ftiles1.value*Value1.value)) + (Number(ftiles2.value*Value2.value)) + (Number(ftiles3.value*Value3.value)))});
+ftiles2.addEventListener("change", function() {totalvalue.innerHTML= ((Number(ftiles1.value*Value1.value)) + (Number(ftiles2.value*Value2.value)) + (Number(ftiles3.value*Value3.value)))});
+ftiles3.addEventListener("change", function() {totalvalue.innerHTML= ((Number(ftiles1.value*Value1.value)) + (Number(ftiles2.value*Value2.value)) + (Number(ftiles3.value*Value3.value)))});
+
 	        
 	        
 const ethereumButton = document.querySelector('.enableEthereumButton');    

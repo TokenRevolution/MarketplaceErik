@@ -252,9 +252,9 @@ const tntiles = document.getElementById('tntiles');
 ftiles1.addEventListener("change", function() {Value1.innerHTML= ftiles1.value*2000});
 ftiles2.addEventListener("change", function() {Value2.innerHTML= ftiles2.value*2000});
 ftiles3.addEventListener("change", function() {Value3.innerHTML= ftiles3.value*2000});
-ftiles1.addEventListener("change", function() {tntiles.innerHTML= (ftiles1.value + ftiles2.value + ftiles3.value)});
-ftiles2.addEventListener("change", function() {tntiles.innerHTML= (ftiles1.value + ftiles2.value + ftiles3.value)});
-ftiles3.addEventListener("change", function() {tntiles.innerHTML= (ftiles1.value + ftiles2.value + ftiles3.value)});
+ftiles1.addEventListener("change", function() {tntiles.innerHTML= number(ftiles1.value + ftiles2.value + ftiles3.value)});
+ftiles2.addEventListener("change", function() {tntiles.innerHTML= number(ftiles1.value + ftiles2.value + ftiles3.value)});
+ftiles3.addEventListener("change", function() {tntiles.innerHTML= number(ftiles1.value + ftiles2.value + ftiles3.value)});
 	        
 	        
 const ethereumButton = document.querySelector('.enableEthereumButton');    

@@ -154,7 +154,7 @@ width:100% !important;
                     <a href="#"><img src="https://www.impresaedilespanu.com/images/case/costruzione-villetta-roma.jpg" alt=""></a>
                   </div>
                   <div class="right-content">
-			  <span class="category">$<p id="primovalore"> 2000</p>/tile</span>
+			  <span class="category">$<p id="primovalore" value="2000"> 2000</p>/tile</span>
                     <span class="date">24 September 2021</span>
                     <a href="#"><h4>ID:001<br>Nuova casa in vendita, raccolta appena iniziata, costo per tile $ 2000</h4></a>
                     <p>In splendita localita a Tenerife, via le mani dal naso, si avvia costruzione di una villa di Mq 400 e valore di costruzione di $ 800.000, il valore di ogni tiles è pari a $ 2000</p>
@@ -175,7 +175,7 @@ width:100% !important;
                     <a href="#"><img src="https://www.impresaedilespanu.com/images/case/costruzione-villetta-roma.jpg" alt=""></a>
                   </div>
                   <div class="right-content">
-                    <span class="category">$<p id="secondovalore"> 2000</p>/tile</span>
+                    <span class="category">$<p id="secondovalore" value="2000"> 2000</p>/tile</span>
                     <span class="date">24 September 2021</span>
                     <a href="#"><h4>ID:002<br>Nuova casa in vendita, raccolta appena iniziata, costo per tile $ 2000</h4></a>
                     <p>In splendita localita a Tenerife, via le mani dal naso, si avvia costruzione di una villa di Mq 400 e valore di costruzione di $ 800.000, il valore di ogni tiles è pari a $ 2000</p>
@@ -196,7 +196,7 @@ width:100% !important;
                     <a href="#"><img src="https://www.impresaedilespanu.com/images/case/costruzione-villetta-roma.jpg" alt=""></a>
                   </div>
                   <div class="right-content">
-                    <span class="category">$<p id="terzovalore"> 2000</p>/tile</span>
+                    <span class="category">$<p id="terzovalore" value="2000"> 2000</p>/tile</span>
                     <span class="date">24 September 2021</span>
                     <a href="#"><h4>ID:003<br>Nuova casa in vendita, raccolta appena iniziata, costo per tile $ 2000</h4></a>
                     <p>In splendita localita a Tenerife, via le mani dal naso, si avvia costruzione di una villa di Mq 400 e valore di costruzione di $ 800.000, il valore di ogni tiles è pari a $ 2000</p>
@@ -260,7 +260,7 @@ ftiles2.addEventListener("change", function() {tntiles.innerHTML= ((Number(ftile
 ftiles3.addEventListener("change", function() {tntiles.innerHTML= ((Number(ftiles1.value)) + (Number(ftiles2.value)) + (Number(ftiles3.value)))});
 ftiles1.addEventListener("change", function() {totalvalue.innerHTML= ((Number(ftiles1.value*primovalore.value)) + (Number(ftiles2.value*secondovalore.value)) + (Number(ftiles3.value*terzovalore.value)))});
 ftiles2.addEventListener("change", function() {totalvalue.innerHTML= ((Number(ftiles1.value)) + (Number(ftiles2.value)) + (Number(ftiles3.value)))});
-ftiles3.addEventListener("change", function() {totalvalue.innerHTML= ((Number(ftiles1.value)) + (Number(ftiles2.value)) + (Number(ftiles3.value)))});
+ftiles3.addEventListener("change", function() {totalvalue.innerHTML= ((Number(Value1.innerHTML)) + (Number(Value2.innerHTML)) + (Number(Value3.innerHTML)))});
 
 	        
 	        

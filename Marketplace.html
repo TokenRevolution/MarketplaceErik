@@ -251,16 +251,21 @@ const primovalore = document.getElementById('primovalore');
 const secondovalore = document.getElementById('secondovalore');
 const terzovalore = document.getElementById('terzovalore');
 console.log("primovalore"+primovalore.innerHTML);	    
-	    
+var  primovaloreNUM = (primovalore.innerHTML,10);
+console.log("secondovalore"+secondovalore.innerHTML);	    
+var  secondovaloreNUM = (secondvalore.innerHTML,10);
+console.log("terzovalore"+terzovalore.innerHTML);	    
+var  terzovaloreNUM = (terzovalore.innerHTML,10);
+
 ftiles1.addEventListener("change", function() {Value1.innerHTML= ftiles1.value*2000});
 ftiles2.addEventListener("change", function() {Value2.innerHTML= ftiles2.value*2000});
 ftiles3.addEventListener("change", function() {Value3.innerHTML= ftiles3.value*2000});
 ftiles1.addEventListener("change", function() {tntiles.innerHTML= ((Number(ftiles1.value)) + (Number(ftiles2.value)) + (Number(ftiles3.value)))});
 ftiles2.addEventListener("change", function() {tntiles.innerHTML= ((Number(ftiles1.value)) + (Number(ftiles2.value)) + (Number(ftiles3.value)))});
 ftiles3.addEventListener("change", function() {tntiles.innerHTML= ((Number(ftiles1.value)) + (Number(ftiles2.value)) + (Number(ftiles3.value)))});
-ftiles1.addEventListener("change", function() {totalvalue.innerHTML= ((Number(ftiles1.value*primovalore.value)) + (Number(ftiles2.value*secondovalore.value)) + (Number(ftiles3.value*terzovalore.value)))});
-ftiles2.addEventListener("change", function() {totalvalue.innerHTML= ((Number(ftiles1.value)) + (Number(ftiles2.value)) + (Number(ftiles3.value)))});
-ftiles3.addEventListener("change", function() {totalvalue.innerHTML= ((Number(Value1.innerHTML)) + (Number(Value2.innerHTML)) + (Number(Value3.innerHTML)))});
+ftiles1.addEventListener("change", function() {totalvalue.innerHTML= ((Number(ftiles1.value))*primovaloreNUM + (Number(ftiles2.value))*secondovaloreNUM + (Number(ftiles2.value))*secondovaloreNUM });
+ftiles2.addEventListener("change", function() {totalvalue.innerHTML= ((Number(ftiles1.value))*primovaloreNUM + (Number(ftiles2.value))*secondovaloreNUM + (Number(ftiles2.value))*secondovaloreNUM });
+ftiles3.addEventListener("change", function() {totalvalue.innerHTML= ((Number(ftiles1.value))*primovaloreNUM + (Number(ftiles2.value))*secondovaloreNUM + (Number(ftiles2.value))*secondovaloreNUM });
 
 	        
 	        

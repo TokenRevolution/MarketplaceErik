@@ -130,10 +130,11 @@ p {
   color: #fff;
   box-shadow: 15px 15px 15px;
   background-color: #000000;
-  font-family: 
+  font-family:; 
   padding: 14px;
   margin: 10px;
   border-radius: 30px;
+  text-align: center;
 }
 
 img {

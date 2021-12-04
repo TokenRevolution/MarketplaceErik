@@ -127,7 +127,13 @@ p {
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
-  color: #afafaf;
+  color: #fff;
+  box-shadow: 15px 15px 15px;
+  background-color: #000000;
+  font-family: 
+  padding: 14px;
+  margin: 10px;
+  border-radius: 30px;
 }
 
 img {

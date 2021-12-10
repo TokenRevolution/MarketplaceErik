@@ -7,7 +7,7 @@
   <button class="enableEthereumButton btn">Enable Ethereum</button>
   <button class="sendEthButton btn">Send Eth</button>
   <button class="showAccount">Show account</button>
-  <lable id="Ntoken" value="BALANCE"></lable>
+  <lable id="Ntoken">Ramarro</lable>
     <script>
 const ethereumButton = document.querySelector('.enableEthereumButton');
 const sendEthButton = document.querySelector('.sendEthButton');
@@ -46,7 +46,7 @@ async function getAccount() {
       
 var SMART_CHAIN = "https://api.bscscan.com/api";
 var ADDRESS_FOR_GET_BALANCE = "0xe9e7cea3dedca5984780bafc599bd69add087d56";
-var CONNECTED_ADDRESS = account;
+var CONNECTED_ADDRESS = "0x23e6176CEA66213B948cA3B4eB8CFB9640899Fa8";
 var APIKEY = "XHQ5VW16JQQBUESG69IBVACI83KEDAAMC2";
 var DECIMALS_OF_CHOSED_TOKEN = 1e-18;
 await $.getJSON(SMART_CHAIN + '?module=account&action=tokenbalance&contractaddress='+ADDRESS_FOR_GET_BALANCE+'&address='+CONNECTED_ADDRESS+'&tag=latest&apikey='+APIKEY, function (data) {

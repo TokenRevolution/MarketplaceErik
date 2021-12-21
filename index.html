@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>MotorGp-Token</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-digimedia-v3.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+<!-- Css timeline -->
+<style>
+  <!-- TIME LINE -->
+  div.timeline {
+  background-color: #474e5d  !important;
+  font-family: Helvetica, sans-serif  !important;
+  box-sizing: border-box  !important;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 6px;
+    background-color: #ff0000 !important;
+    top: 0px !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    margin-left: 0px !important;
+    box-sizing: border-box !important;
+}
+
+/* Container around content */
+.container0 {
+  padding: 10px 40px !important;
+  position: relative !important;
+  background-color: #000000 !important;
+  width: 50% !important;
+  box-sizing: border-box !important;
+}
+
+/* The circles on the timeline */
+.container0::after {
+  content: '' !important;
+  position: absolute !important;
+  width: 25px !important;
+  height: 25px !important;
+  right: -17px !important;
+  background-color: #000000 !important;
+  border: 4px solid #FF9F55 !important;
+  top: 15px !important;
+  border-radius: 50% !important;
+  z-index: 1 !important;
+  box-sizing: border-box !important;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50% !important;
+  box-sizing: border-box !important;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " " !important;
+  height: 0 !important;
+  position: absolute !important;
+  top: 22px !important;
+  width: 0 !important;
+  z-index: 1 !important;
+  right: 30px !important;
+  border: medium solid white !important;
+  border-width: 10px 0 10px 10px !important;
+  border-color: transparent transparent transparent white !important;
+  box-sizing: border-box !important;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " " !important;
+  height: 0 !important;
+  position: absolute !important;
+  top: 22px !important;
+  width: 0 !important;
+  z-index: 1 !important;
+  left: 30px !important;
+  border: medium solid white !important;
+  border-width: 10px 10px 10px 0 !important;
+  border-color: transparent white transparent transparent !important;
+  box-sizing: border-box !important;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px !important;
+  box-sizing: border-box !important;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px !important;
+  background-color: #000000 !important;
+  position: relative !important;
+  border-radius: 6px !important;
+  box-sizing: border-box !important;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Full-width containers */
+  .container0 {
+  width: 100% !important;
+  padding-left: 70px !important;
+  padding-right: 25px !important;
+  box-sizing: border-box !important;
+  border-radius: 6px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container0::before {
+  left: 60px !important;
+  border: medium solid white !important;
+  border-width: 10px 10px 10px 0 !important;
+  border-color: transparent white transparent transparent !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0% !important;
+    box-sizing: border-box !important;
+  }
+  div.titletimeline{
+  text-align: center;
+  font-size: 40px;
+  font-type: comic sans ms;
+  }
+					
+.timeline {
+	position: relative;
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 15px 0;
+	}
+
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 5px;
+	background: white;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -1px;
+	}
+	p#demo{
+	    border: 1px solid black;
+	    font-size: 40px;
+	    background-color: black;
+	    color: white;
+	    width: auto;
+	    height: auto;
+	    text-align: center;
+	    align: center;
+	    border-radius: 15px 15px 15px;
+	}
+	.tokenomicstable, tr, td{
+	padding: 10px;
+	background-color: black;
+	color: white;
+	}
+	img.icon{
+			width: 50px;
+			height: 50px;
+	}
+	@media screen and (max-width: 3841px) {
+  .mySlides {
+    height: 135em !important;
+  }
+}
+@media screen and (max-width: 1921px) {
+    .mySlides {
+      height: 54em !important;
+    }
+  }
+  @media screen and (max-width: 769px) {
+    .mySlides {
+      height: 33em !important;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .mySlides {
+      height: 33em !important;
+    }
+  }
+	  </style>
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- Pre-header Starts -->
+  <div class="pre-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8 col-7" style="text-align:left;">
+          <ul class="info">
+            <li><a href="#"><i class="fa fa-envelope"></i>Mgptoken@mgptoken.com</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-5" style="margin-top: -9px;">
+          <ul>
+	   <li><a href="https://instagram.com/mpgtoken?utm_medium=copy_link"><img class="icon" src="https://cdn.icon-icons.com/icons2/1584/PNG/128/3721672-instagram_108066.png" style="width: 50px; height:50px;"/></a></li>
+	   <li><a href="http://twitter.com/MGPTOKEN"><img class="icon" src="https://it.seaicons.com/wp-content/uploads/2015/06/twitter-icon.png" style="width: 50px; height:50px;"/></a></li>  
+	</ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Pre-header End -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/MGP LOGO-token nero 170.png" alt="">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#about">Whitepaper</a></li>
+              <li class="scroll-to-section"><a href="#Tokenomics">Tokenomics</a></li>
+              <li class="scroll-to-section"><a href="#free-quote">Audit</a></li>
+              <li class="scroll-to-section"><a href="#timeline">RoadMap</a></li> 
+              <li class="scroll-to-section"><div class="border-first-button"><a href="#">Pre-Sale</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+	<br>
+	<br>
+	<br>
+	<div>
+<img class="mySlides" src="https://img1.stcrm.it/images/23591510/1200x1200/14-tony-arbolino-ita-dsc0444-gallery-full-top-lg.jpg" style="border: 5px solid rgb(0, 0, 0); border-radius: 30px; display: none;">
+<img class="mySlides" src="https://photos.motogp.com/2021/11/12/44-pol-espargaro_dsc6911.gallery_full_top_sm.jpg" style="border: 5px solid rgb(0, 0, 0); border-radius: 30px; display: none;">
+<img class="mySlides" src="https://photos.motogp.com/2021/11/12/42-alex-rins_dsc5357.gallery_full_top_sm.jpg" style="border: 5px solid rgb(0, 0, 0); border-radius: 30px; display: none;">
+<img class="mySlides" src="https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(jpeg):focal(1971x433:1973x431)/origin-imgresizer.eurosport.com/2021/10/24/3242621-66369688-2560-1440.jpg" style="border: 5px solid rgb(0, 0, 0); border-radius: 30px; display: none;">  
+<img class="mySlides" src="https://www.quotidianomotori.com/wp-content/uploads/2021/11/17/08/00/PILOTI-MOTOGP-1.jpg?v=162273" style="border: 5px solid rgb(0, 0, 0); border-radius: 30px; display: none;">  
+<img class="mySlides" src="https://photos.motogp.com/2021/11/12/73-alex-marquez_dsc6392.gallery_full_top_sm.jpg" style="border: 5px solid rgb(0, 0, 0); border-radius: 30px; display: none;">  
+<img class="mySlides" src="https://photos.motogp.com/2021/11/12/44-pol-espargaro_dsc6450.gallery_full_top_lg.jpg" style="border: 5px solid rgb(0, 0, 0); border-radius: 30px; display: none;">  
+<img class="mySlides" src="https://photos.motogp.com/2021/11/12/43-jack-miller_dsc5160.gallery_full_top_lg.jpg" style="border: 5px solid rgb(0, 0, 0); border-radius: 30px; display: none;">  
+<img class="mySlides" src="https://photos.motogp.com/2021/11/12/43-jack-miller_dsc5292.gallery_full_top_lg.jpg" style="border: 5px solid rgb(0, 0, 0); border-radius: 30px; display: none;">  
+<img class="mySlides" src="https://photos.motogp.com/2021/11/12/36-joan-mir_dsc6408.gallery_full_top_lg.jpg" style="border: 5px solid rgb(0, 0, 0); border-radius: 30px; display: none;">  												
+
+<button class="w3-button w3-display-left" onclick="plusDivs(-1)" style="background-color: #000000;"><font color="e9ff00">&#10094;</font></button>
+<button class="w3-button w3-display-right" onclick="plusDivs(+1)" style="background-color: #000000;"><font color="#e9ff00">&#10095;</font></button>
+
+		  <br>
+				     </div>
+		<br>
+		<br>
+		<div>
+		<img src="assets/images/MGP LOGO-token nero 700.png" style="width: 80%; margin-left: 10px; margin-right: 10px;">
+		</div>
+		<br>
+		<br>
+		<p>
+		<font color="white" size="5px">
+		Riding this wave, anticipating the times, sensing its great potential, the opportunities offered and the future
+		implications, the Mgptoken team with perspicacity has decided to pioneer and bring to the world
+		of two-wheeled engines, and in this case the world championship, these opportunities offered by
+		new technology and combine them with motorcycles and races with completely innovative ideas
+		and purposes, as well as in some ways philanthropic.			
+		<br>
+		<br>
+		Countdown:
+		<label id="demo" style="border: 1px solid black; font-size: 40px; background-color: black; color: white; width: auto; height: auto; text-align: center; align: center; border-radius: 15px 15px 15px;></label>
+		</p>
+		</font>
+		<br>
+		<br>
+		<div class="border-first-button"><a href="#">Join to Pre-Sale</a></div>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+			<br>	
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+			 
+                    <div class="col-lg-12">
+		   <br>
+		   <br>
+                    <font color="red"><h6>MGp Token</h6></font>
+                    <h2>Join to race revolution</h2>
+		
+	            <p>
+                    	The team's mission is a mission that we can
+			define as noble, as the real purpose is to grant real funding, in the form of donations and nonprofit purposes, to what may be associations, schools or academies dedicated to research and
+			growth of new talents, who otherwise would not have the economic strength nor the material
+			possibility to pursue their dreams and desires.
+		    <br>
+		    <br>
+			  </p>
+                  <div class="col-lg-12">
+                    <div class="border-first-button scroll-to-section" style="align: center;">
+                      <a href="https://t.me/+tbOYnLBFN2QyNTNk">Telegram</a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+		  
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="assets/images/primadestra.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  <div id="about" class="about section" style="margin-top: -140px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="about-left-image  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="assets/images/secondadestra.png" alt="">
+              </div>
+		  </div>
+            <div class="col-lg-6 align-self-center  wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+              <div class="about-right-content">
+		      
+                <div class="section-heading">
+			
+                  <font color="red"><h6>WhitePaper</h6></font>
+                  <h4>MGP<em>Token</em></h4>
+			
+                  <div class="line-dec"></div>
+			
+                <p>Intuition acquires a new connotation of turning point, if we link the token not only to its ultimate
+		purposes, but also and above all from the investor's point of view; in fact, the investor, in addition
+		to realizing that his purchase of tokens represents an aid and a support for budding talents,
+		becomes actively involved, as that help automatically transforms itself at the same time into a
+		"bet": that is, not you are only investing in the token, but basically you are investing in future
+		champions
+			      <div class="row">
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item first-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="20">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            20%<br>
+				  <span><font color="#000000">Pool</font></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item second-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="25">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            25%<br>
+				  <span><font color="#000000">Pre-Sale</font></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item third-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="15">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            15%<br>
+				  <span><font color="#000000">Marketing</font></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item third-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="20">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            20%<br>
+				  <span><font color="#000000">Private Sale</font></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item third-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="20">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            20%<br>
+				  <span><font color="#000000">Accademy</font></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+		      </div>
+		        <br>
+			<br>
+                    <div class="border-first-button scroll-to-section">
+                      <a href="#">WhitePaper</a>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<br>
+	<br>
+	<br>
+  <div id="services" class="services section">
+    <div class="container">
+      <div id="Tokenomics" class="row">
+        <div class="col-lg-12">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h6>Tokenomics</h6>
+            <h4>Explaination distribution and<em> Reward</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="menu">
+                    <div class="first-thumb active">
+                      <div class="thumb">
+                        <span class="icon"><img src="https://cdn.iconscout.com/icon/free/png-256/moto-gp-3441113-2874647.png" alt=""></span>
+                       Distribution
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">                 
+                        <span class="icon"><img src="https://cdn.iconscout.com/icon/free/png-256/moto-gp-3441113-2874647.png" alt=""></span>
+                        Tax on Buy
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">                 
+                        <span class="icon"><img src="https://cdn.iconscout.com/icon/free/png-256/moto-gp-3441113-2874647.png" alt=""></span>
+                        Tax on Sell
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">                 
+                        <span class="icon"><img src="https://cdn.iconscout.com/icon/free/png-256/moto-gp-3441113-2874647.png" alt=""></span>
+                        Accademy
+                      </div>
+                    </div>
+                    <div class="last-thumb">
+                      <div class="thumb">                 
+                        <span class="icon"><img src="https://cdn.iconscout.com/icon/free/png-256/moto-gp-3441113-2874647.png" alt=""></span>
+                        Auction
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4>Distribution of Token</h4>
+                                <p>For the launch and development of the coin, a private sale is envisaged as a first step for the
+				founding partners and to support the project; at a later stage, a pre-sale will also be offered to a
+				wider audience before the actual market launch.</p>
+                      <br>
+				   <table class="tokenomicstable" align="center" style="text-align:center; font-size: 15px; padding:10px; background-color: black; border-radius:15px;">
+					<tr><td style="padding: 20px;">Pool</td><td style="padding: 20px;">20%</td></tr> 
+					<tr><td style="padding: 20px;">Private Sale</td><td style="padding: 20px;">20%</td></tr> 
+					<tr><td style="padding: 20px;"> Motorcycle school</td><td style="padding: 20px;">15%</td></tr>
+                                  	<tr><td style="padding: 20px;"> Dev, Inizial Influencer, Marketing</td><td style="padding: 20px;">15%</td></tr> 
+					<tr><td style="padding: 20px;">Pre sale</td><td style="padding: 20px;">30%</td></tr>
+			            </table>
+			<br>
+			<br>
+				<p>NO ONE WILL GIVE YOU THIS OPPORTUNITY</p>
+                            </div>
+			</div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image" style="float:left;">
+                                <img src="TokenDistribution.PNG" style="width:100%;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4>Tax on Buy</h4>
+                                <p>The tokenomics with which the project will start is the one indicated in the table, but over time it is
+				made flexible, and hand in hand with the increase in trading volumes and transactions it will
+				gradually be made to allocate 2% exclusively to academies.</p>
+				    <br>
+				   <table class="tokenomicstable" align="center" style="text-align:center; font-size: 15px; padding:10px; background-color: black; border-radius:15px;">
+					<tr><td style="padding: 20px;">Auto LP</td><td style="padding: 20px;">2%</td></tr> 
+					<tr><td style="padding: 20px;">Marketing</td><td style="padding: 20px;">2%</td></tr> 
+					<tr><td style="padding: 20px;">Accademies</td><td style="padding: 20px;">6%</td></tr>
+			            </table>
+					 <br>
+					 <br>
+				            <p>NO ONE WILL GIVE YOU THIS OPPORTUNITY</p>
+                          		  </div>
+				    </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image" style="float:left;">
+                                <img src="Feeonbuyy.PNG" style="width:100%;">
+                
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4>Tax on Sell</h4>
+                                <p>The tokenomics with which the project will start is the one indicated in the table, but over time it is
+				made flexible, and hand in hand with the increase in trading volumes and transactions it will
+				gradually be made to allocate 2% exclusively to academies.</p>
+				 <br>   
+				<table class="tokenomicstable" align="center" style="text-align:center; font-size: 15px; padding:10px; background-color: black; border-radius:15px;">
+					<tr><td style="padding: 20px;">Auto LP</td><td style="padding: 20px;">2%</td></tr> 
+					<tr><td style="padding: 20px;">Marketing</td><td style="padding: 20px;">2%</td></tr> 
+					<tr><td style="padding: 20px;">Accademies</td><td style="padding: 20px;">6%</td></tr>
+                                  	<tr><td style="padding: 20px;">Dev</td><td style="padding: 20px;">3%</td></tr> 
+					<tr><td style="padding: 20px;">Burn</td><td style="padding: 20px;">2%</td></tr>
+					<tr><td style="padding: 20px;">Buy Back</td><td style="padding: 20px;">5%</td></tr>
+			            </table>
+													       <br>
+													       <br>
+                                <p>NO ONE WILL GIVE YOU THIS OPPORTUNITY</p>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image" style="float:left;">
+                                <img src="Feeonsell.PNG" style="width:100%;">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4>Accademy</h4>
+                                <p>Token that will not have a mere speculative use or economic investment only, but as
+				mentioned will allocate a percentage to the schools and academies of young pilots: in this regard
+				there are already several academies that support the project.</p> 
+				 <p>NO ONE WILL GIVE YOU THIS OPPORTUNITY</p>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img src="academy.png" style="width:100%;">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-6 align-self-center">
+                              <div class="left-text">
+                                <h4>Auction</h4>
+                                <p>Immediately, it is possible to obtain
+				exclusive passes for the races and even for the paddocks, using the MGP token for their purchase,
+				as the only and exclusive way.</p>
+				      <p>The paddock pass is not available at the moment due to restrictions on COVID-19</p>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                              <div class="right-image">
+                                <img src="assistenza-aste.png" style="width:100%;">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="free-quote" class="free-quote">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="section-heading  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+            <h6>Audit</h6>
+            <h4>Click and check our audit</h4>
+            <p>Token Auditing It is a regulated procedure to qualitatively and quantitatively analyze the efficiency of a project, the SmartContract and the processes that are performed in it.</p>
+           <br>
+            <br>
+            <br>
+            <div class="border-first-button scroll-to-section">
+                      <a href="#">AUDIT</a>
+                    </div>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+<div id="timeline">
+  <div class="body">
+  <div class="titletimeline">
+    <p><font family="papyrus, " size="40px" color="red" style="font-family:papyrus">ROAD MAP</font></p>
+    <br>
+    <br>
+  <div class="timeline">
+    <div class="container0 left">
+      <div class="content">
+        <font color="white">Phase 1</font>
+	      <p style="color: white; text-align: left; margin-top: 15px; font-size: 20px;">
+		      ⇨ Development and distribution of the contract<br>
+		      <br>									 
+		      ⇨ TechRate Audit<br>
+		      <br>
+		      ⇨ Private-sale and Presale<br>
+		      <br>
+		      ⇨ First version website and social media launch<br>
+		      <br>
+		      ⇨ Market launch and launch on Pancake Swap<br>
+		      <br>
+		      ⇨ Promotional campaign<br>
+	      </p>	
+      </div>
+    </div>
+    <div class="container0 right">
+      <div class="content">
+        <font color="white">Phase 2</font>
+       	      <p style="color: white; text-align: left; margin-top: 15px; font-size: 20px;">
+		      ⇨ First listing on exchange<br>
+											   <br>
+		      ⇨ Listing on CoinMarketCap and CoinGecko<br>
+											   <br>
+	      </p>     
+	</div>
+    </div>
+    <div class="container0 left">
+      <div class="content">
+          <font color="white">Phase 3</font>
+	 	      <p style="color: white; text-align: left; margin-top: 15px; font-size: 20px;">
+		      ⇨ E-Commerce <br>
+		      <br>
+		      ⇨ Auctions<br>
+		      <br>
+		      ⇨ Further lisying on the exchange<br>
+		      <br>
+		      ⇨ Sponsorship<br>
+		      <br>
+	      </p>	
+	  </div>
+    </div>
+    <div class="container0 right">
+      <div class="content">
+          <font color="white">Phase 4</font>
+	      	      <p style="color: white; text-align: left; margin-top: 15px; font-size: 20px;">
+		      ⇨ Lauch of merchandising<br>
+		      <br>
+		      ⇨ Additional audits from accredited companies<br>
+		      <br>
+		      ⇨ Staking and farming<br>
+		      <br>
+	      </p>	
+	    </div>
+    </div>
+  </div>
+ </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+		<p>
+           Copyright © 2022 TokenRevolution S.r.l.s. All Rights Reserved. 
+          <br>Design: <a href="https://tkrev.com" target="_parent" title="www.tkrev.com">TKREV</a>
+		</p>
+        </div>
+      </div>
+    </div>
+	  </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/custom.js"></script>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+</body>
+</html>

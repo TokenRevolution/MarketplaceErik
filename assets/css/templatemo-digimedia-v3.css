@@ -124,12 +124,11 @@ ul {
 }
 
 p {
- font-size: 15px;
+  font-size: 15px;
   line-height: 30px;
   font-weight: 300;
   color: #fff;
-  box-shadow: 15px 15px 15px;
-  background-color: #000000; 
+  background-color: #112e3e; 
   padding: 14px;
   margin: 10px;
   border-radius: 30px;

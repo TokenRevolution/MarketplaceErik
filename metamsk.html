@@ -59,7 +59,6 @@ var APIKEY = "XHQ5VW16JQQBUESG69IBVACI83KEDAAMC2";
 var DECIMALS_OF_CHOSED_TOKEN = 1e-18;
 await $.getJSON(SMART_CHAIN + '?module=account&action=tokenbalance&contractaddress='+ADDRESS_FOR_GET_BALANCE+'&address='+CONNECTED_ADDRESS+'&tag=latest&apikey='+APIKEY, function (data) {
     let BALANCE = data['result'] * DECIMALS_OF_CHOSED_TOKEN;
-
   document.getElementById('Ntoken').innerHTML = BALANCE;
   });
       } 
